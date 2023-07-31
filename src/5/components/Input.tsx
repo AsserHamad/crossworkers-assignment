@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { ChangeEvent, FunctionComponent } from "react";
 
 /*
  * The InputProps interface defines the types for the components props.
@@ -10,11 +10,16 @@ import { FunctionComponent } from "react";
  * and remove the InputProps interface
  */
 
-interface InputProps {}
+interface InputProps {
+  value: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+}
 
-const Input: FunctionComponent<InputProps> = (props) => {
+const Input: FunctionComponent<InputProps> = ({ onChange, value }) => {
   return (
-    <div>#Input goes here#</div>
+    <div>
+      <input value={value} onChange={onChange} />
+    </div>
   );
 };
 

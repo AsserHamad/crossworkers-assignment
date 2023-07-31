@@ -1,15 +1,18 @@
-import { FunctionComponent, useState } from "react";
+import { ChangeEvent, FunctionComponent, useState } from "react";
 
 const Task2: FunctionComponent = () => {
   const [value, setValue] = useState("");
 
+  const onInputChange = (event: ChangeEvent<HTMLInputElement>) =>
+    setValue(event.currentTarget.value);
+
   return (
     <div>
-      <label>Controlled Input: </label>
-      <input />
+      <label>Controlled Input:</label>
+      <input onChange={onInputChange} />
       <br />
       <br />
-      <p>#Show Input value here#</p>
+      <p>{value}</p>
     </div>
   );
 };

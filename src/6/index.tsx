@@ -2,6 +2,7 @@ import * as React from "react";
 
 // Style
 import "./index.scss";
+import App from "./App";
 
 // Components
 /*
@@ -10,7 +11,11 @@ import "./index.scss";
  */
 
 const Task6: React.FunctionComponent = () => {
-  return <div id="task-6">#Code goes here#</div>;
+  return (
+    <div id="task-6">
+      <App />
+    </div>
+  );
 };
 
 export default Task6;

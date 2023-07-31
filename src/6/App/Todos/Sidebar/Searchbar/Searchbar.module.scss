@@ -1,0 +1,19 @@
+.searchbar {
+  $background: rgb(223, 223, 223);
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+
+  font-size: 0.7rem;
+
+  border-radius: 200px;
+  border: none;
+  outline: none;
+  background-color: $background;
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($background, 3);
+  }
+}

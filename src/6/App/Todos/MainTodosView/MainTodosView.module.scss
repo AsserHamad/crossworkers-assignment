@@ -1,0 +1,39 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 75%;
+  padding: 20px;
+  gap: 20px;
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__input {
+    > input {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 10px;
+
+      outline: none;
+      border: none;
+      background-color: rgb(209, 209, 209);
+      transition-duration: 0.2s;
+
+      &:hover {
+        background-color: lighten(rgb(209, 209, 209), 3);
+      }
+    }
+  }
+
+  &__list {
+    width: 100%;
+    overflow: hidden;
+
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
